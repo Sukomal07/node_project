@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project 2</title>
+</head>
+
+<body>
+    {{>navbar}}
+    {{!-- hero section start --}}
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div
+                        class="col-md-6 col-12 hero-text order-md-0 order-1 d-flex justify-content-center align-items-start flex-column">
+                        <h1>WE WILL HELP YOU TO</h1>
+                        <h1>GROW YOUR BUSINESS</h1>
+                        <P>We Are The Team of <span class="bold-style">Professional Devloper</span></P>
+                        <button class="btn-style btn-primary">Read more</button>
+                    </div>
+                    {{!-- right side --}}
+                    <div class="col-md-6 col-12 hero-text order-md-1 order-0">
+                        <figure>
+                            <img src="images/growth.svg" alt="growth">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- hero section end --}}
+    {{!-- about section start --}}
+    {{>about}}
+    {{!-- about section end --}}
+    {{!-- service section start --}}
+    {{>service}}
+    {{!-- service section end --}}
+    {{!-- map secttion start --}}
+    {{>map}}
+    {{!-- map section end --}}
+    {{!-- contact secttion start --}}
+    {{>contact}}
+    {{!-- contact section end --}}
+    {{!-- footer section start  --}}
+    <footer class="text-center text-lg-start bg-light text-muted section-footer">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright Sukomal Dutta
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <button type="button" class="btn-danger" id="btn-back-to-top">
+    <img src="images/arrowup.png"  alt="" class="arrowup">
+    </button>
+</body>
+<script src="../jq/jquery.js" type="text/javascript"></script>
+<script src="../js/bootstrap.js" type="text/javascript"></script>
+<script>
+    // scroll to top button
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+    window.onscroll = function () {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+    ) {
+    mybutton.style.display = "block";
+    } else {
+    mybutton.style.display = "none";
+    }
+    }
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</html>
